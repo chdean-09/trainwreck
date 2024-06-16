@@ -5,17 +5,19 @@
 
   <% content_for :title, "Trains" %>
 
-  <div class="flex justify-between items-center">
+  <div class="flex justify-between items-center ">
     <h1 class="font-bold text-4xl">Trains</h1>
-    <%= link_to "New train", new_train_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+    <%= link_to "New train", new_train_path, class: "rounded-lg py-3 px-5 bg-blue-600 hover:bg-blue-500 text-white block font-medium" %>
   </div>
 
-  <div id="trains" class="min-w-full">
+  <div id="trains" class="min-w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mt-3">
     <% @trains.each do |train| %>
-      <%= render train %>
-      <p>
-        <%= link_to "Show this train", train, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-      </p>
+      <div class="bg-gray-300 rounded-xl p-4 w-auto">
+        <%= render train %>
+        <p>
+          <%= link_to "Show this train", train, class: "ml-2 rounded-lg py-3 px-5 bg-gray-800 hover:bg-gray-700 inline-block font-medium text-white" %>
+        </p>
+      </div>
     <% end %>
   </div>
 </div>
