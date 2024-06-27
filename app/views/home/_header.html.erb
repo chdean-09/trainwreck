@@ -15,9 +15,9 @@
       </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-12">
-      <%= link_to "Trains", trains_path, class: "relative inline cursor-pointer text-sm font-semibold leading-6 text-gray-900 before:bg-violet-600 before:absolute before:-bottom-1 before:block before:h-[2px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100" %>
-      <%= link_to "Features", features_path, class: "relative inline cursor-pointer text-sm font-semibold leading-6 text-gray-900 before:bg-violet-600 before:absolute before:-bottom-1 before:block before:h-[2px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100" %>
-      <%= link_to "About Us", about_us_path, class: "relative inline cursor-pointer text-sm font-semibold leading-6 text-gray-900 before:bg-violet-600 before:absolute before:-bottom-1 before:block before:h-[2px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100" %>
+      <%= link_to "Trains", trains_path, class: "relative inline cursor-pointer text-sm font-semibold leading-6 #{current_page?(about_us_path) ? 'text-white' : 'text-gray-900'} before:bg-violet-600 before:absolute before:-bottom-1 before:block before:h-[2px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100" %>
+      <%= link_to "Features", features_path, class: "relative inline cursor-pointer text-sm font-semibold leading-6 #{current_page?(about_us_path) ? 'text-white' : 'text-gray-900'} before:bg-violet-600 before:absolute before:-bottom-1 before:block before:h-[2px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100" %>
+      <%= link_to "About Us", about_us_path, class: "relative inline cursor-pointer text-sm font-semibold leading-6 #{current_page?(about_us_path) ? 'text-white' : 'text-gray-900'} before:bg-violet-600 before:absolute before:-bottom-1 before:block before:h-[2px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100" %>
     </div>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
       <% if user_signed_in? %>
@@ -32,8 +32,8 @@
         </div>
       <% else %>
         <div class="hidden sm:block">
-          <%= link_to new_user_registration_path, class: "flex space-x-4" do %>
-            <div class="relative inline cursor-pointer text-base font-medium before:bg-violet-600  before:absolute before:-bottom-1 before:block before:h-[2px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100 leading-6 text-gray-900">Sign Up &rarr;</div>
+          <%= link_to new_user_registration_path, class: "flex space-x-4 #{current_page?(about_us_path) ? 'text-white' : 'text-gray-900'}" do %>
+            <div class="relative inline cursor-pointer text-base font-medium before:bg-violet-600  before:absolute before:-bottom-1 before:block before:h-[2px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100 leading-6">Sign Up &rarr;</div>
           <% end %>
         </div>
       <% end %>
