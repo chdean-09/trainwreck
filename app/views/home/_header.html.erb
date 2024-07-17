@@ -66,11 +66,11 @@
       <div class="fixed inset-0 overflow-hidden">
         <div class="absolute inset-0 overflow-hidden">
           <div
-            class="fixed inset-y-0 right-0 flex max-w-full pl-10 pointer-events-none"
+            class="fixed inset-y-0 right-0 flex pl-10 pointer-events-none"
           >
             <div
               data-slide-over-target="panel"
-              class="relative w-screen max-w-md pointer-events-auto"
+              class="relative w-screen pointer-events-auto"
               data-transition-enter="transform transition ease-in-out duration-500 sm:duration-700"
               data-transition-enter-start="translate-x-full"
               data-transition-enter-end="translate-x-0"
@@ -78,7 +78,7 @@
               data-transition-leave-start="translate-x-0"
               data-transition-leave-end="translate-x-full"
             >
-              <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+              <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 max-w-sm sm:ring-1 sm:ring-gray-900/10">
                 <div
                   data-slide-over-target="closeButton"
                   class="flex items-center justify-between"
@@ -121,8 +121,8 @@
                           </div>
                         </div>
                       <% else %>
-                        <div class="hidden sm:block">
-                          <%= link_to "Sign Up", new_user_registration_path, class: "-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" %>
+                        <div class="">
+                          <%= link_to "Sign Up", new_user_registration_path, class: "-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100" %>
                         </div>
                       <% end %>
                     </div>
@@ -130,40 +130,6 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="hidden" role="dialog" aria-modal="true" id="menu-dialog" data-controller="dialog" data-action="keyup@document->dialog#escClose">
-    <!-- Background backdrop, show/hide based on slide-over state. -->
-    <div class="fixed inset-0 z-50"></div>
-
-    <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-      <div class="flex items-center justify-between">
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
-        </a>
-        <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" data-action="dialog#close">
-          <span class="sr-only">Close menu</span>
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-          </svg>
-        </button>
-      </div>
-      <div class="mt-6 flow-root">
-        <div class="-my-6 divide-y divide-gray-500/10">
-          <div class="space-y-2 py-6">
-            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</a>
-            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
-            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
-            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
-          </div>
-          <div class="py-6">
-            <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log
-              in</a>
           </div>
         </div>
       </div>
